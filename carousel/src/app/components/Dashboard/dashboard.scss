@@ -1,5 +1,17 @@
-body {
-  background: no-repeat top;
-  background-size: cover;
-  background-image: url('/background--dashboard.png');
+@import '../../../styles/utils/breakpoints';
+
+body, .carousel__item-container:before {
+  background: url('/background--dashboard.png') 0 / cover fixed;
+}
+
+.dashboard {
+  &__carousel-container {
+    margin: 0 auto;
+  }
+
+  &__other-slide {
+    @include breakpoint(small) {
+      font-size: 18px;
+    }
+  }
 }

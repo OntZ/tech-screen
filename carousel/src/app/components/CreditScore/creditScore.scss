@@ -1,0 +1,63 @@
+@import '../../../styles/utils/breakpoints';
+@import '../../../styles/utils/colours';
+@import '../../../styles/utils/fonts';
+
+.creditscore {
+  text-align: center;
+  font-family: AktivGrotesk;
+  font-weight: $font-weight-normal;
+  font-size: 32px;
+  line-height: 1.5;
+  color: $secondary;
+
+  @include breakpoint(small) {
+    font-size: 18px;
+  }
+
+  &__progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    svg {
+      transform: rotateZ(-90deg);
+      width: 100%;
+      height: 100%;
+      stroke: $score;
+      circle {
+        animation: progressBar 3s;
+        animation-timing-function: cubic-bezier(1,-0.24, 0.83, 1.28);
+      }
+    }
+  }
+
+  &__score {
+    font-size: 140px;
+    line-height: 1;
+    font-weight: $font-weight-thin;
+    color: $score;
+    @include breakpoint(small) {
+      font-size: 80px;
+    }
+  }
+
+  &__max {
+    font-weight: $font-weight-bold;
+  }
+
+  &__band-description {
+    margin-top: 30px;
+    @include breakpoint(small) {
+      margin-top: 15px;
+    }
+    color: $score;
+  }
+
+  @keyframes progressBar {
+    from {
+      stroke-dashoffset: 200;
+    }
+  }
+}
