@@ -1,4 +1,4 @@
-#Serban Ontanu-Craciun
+# Serban Ontanu-Craciun
 
 The carousel itself resides in ```src/app/components/Carousel/Carousel.jsx```. It takes an array of JSX elements as props and wraps them in circular containers which add the bluring filter and handle transitions.
 
