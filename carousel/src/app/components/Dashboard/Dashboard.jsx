@@ -36,7 +36,7 @@ export default class Dashboard extends React.Component {
               limit={data.currentLongTermCreditLimit || 0 + data.currentShortTermCreditLimit || 0}
               change={data.changeInLongTermDebt}
             />,
-            <div>Add as many slides as you want</div>
+            <div className={cn('other-slide')}>Add as many slides as you want</div>
           ]}/>
           : 'Loading data...'
           }
