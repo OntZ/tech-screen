@@ -4,6 +4,8 @@ The carousel itself resides in ```src/app/components/Carousel/Carousel.jsx```. I
 
 ```src/app/components/Dashboard/Dashboard.jsx``` has been updated to use ```Carousel``` and define the two content slides, taken from ```CreditScore``` and ```LongTermDebt``` respectively. ```Dashboard``` also makes the call to the API through ```src/app/services/Credit```.
 
+The score bar with animation was done using an svg inside ```src/app/components/CreditScore/CreditScore.jsx```.
+
 Tests cover rendering without errors and the method which changes index in ```Carousel```.
 
 Added some mixins/vars for breakpoints and font sizes inside the ```utils``` folder of the styles.
